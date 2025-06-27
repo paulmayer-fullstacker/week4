@@ -35,11 +35,7 @@ The To-Do list would probably benefit from a few added feature:
 - Progress, between timelines.
 - Comments: on progress, challenges and achievements.
 
-Converting tasks from a simple text span into more complex objects, will require a more complex storage/display structure. For example: a table of 'task' objects, rather than a list of 'task' text descriptions.
-
-#### Feature Enhancements (server-side):
-
-Functionality of the To-Do list can only be realised through data persistance. So, serverside storage and processing must be implemented, if this product is to be commercialy/functionally progressed.
+Converting tasks from a simple text span into more complex objects will require a more complex storage/display structure. For example: a table of 'task' objects, rather than a list of 'task' text descriptions.
 
 ---
 
