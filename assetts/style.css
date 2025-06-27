@@ -1,0 +1,175 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align to the top */
+    min-height: 100vh;
+    margin: 20px; /* Add some margin around the container */
+}
+
+.container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 25px;
+}
+
+.input-section {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#taskInput {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+#taskInput:focus {
+    border-color: #3b82f6; /* ring-blue-500 */
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25); /* ring-blue-500/25 */
+}
+
+#addTaskBtn {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.2s ease-in-out;
+}
+
+#addTaskBtn:hover {
+    background-color: #218838;
+}
+
+#taskList {
+    list-style: none;
+    padding: 0;
+}
+
+#taskList li {
+    background-color: #f9f9f9;
+    padding: 12px 15px;
+    margin-bottom: 8px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #eee;
+    word-break: break-word; /* Ensure long tasks wrap */
+}
+
+ #taskList li:hover {
+    transform: translateY(-2px);
+}
+
+#taskList li span.task-text {
+    flex-grow: 1;
+    margin-right: 10px;
+}
+
+#taskList li button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: 5px; /* Space between buttons */
+    transition: background-color 0.2s ease-in-out;
+}
+
+.task-text {
+    flex-grow: 1;
+    font-size: 1.1rem;
+    color: #1e293b; /* text-slate-800 */
+    word-break: break-word; /* Ensure long words break */
+    margin-right: 15px; /* Space between text and buttons */
+}
+
+.button-container {
+    display: flex;
+    gap: 8px;
+}
+
+.edit-btn, .delete-btn, .save-btn, .cancel-btn {
+    padding: 8px 14px;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out, transform 0.1s ease-in-out;
+    font-weight: 600;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.edit-btn {
+    background-color: #007bff;
+    color: white;
+}
+
+.edit-btn:hover {
+    background-color: #0056b3;
+}
+
+.delete-btn {
+    background-color: #dc3545;
+    color: white;
+}
+
+.delete-btn:hover {
+    background-color: #c82333;
+}
+
+.save-btn {
+    background-color: #ffc107;
+    color: #333;
+}
+
+.save-btn:hover {
+    background-color: #e0a800;
+}
+
+.error-message {
+    color: #dc3545;
+    margin-top: 10px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.cancel-btn {
+    background-color: #64748b; /* bg-slate-500 */
+    color: white;
+}
+.cancel-btn:hover {
+    background-color: #475569; /* bg-slate-600 */
+}
+
+.edit-input {
+    flex-grow: 1; /* Allow it to grow and take available space */
+    padding: 8px 10px; /* Increased padding */
+    border: 2px solid #94a3b8; /* border-slate-400 */
+    border-radius: 6px;
+    font-size: 1rem; /* Ensure legible font size */
+    outline: none;
+    margin-right: 10px; /* Space between input and new buttons */
+    box-sizing: border-box; /* Include padding/border in element's total width */
+}
+.edit-input:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25);
+}
