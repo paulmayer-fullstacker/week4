@@ -1,8 +1,8 @@
-# The Interactive TODO List
+# The Interactive TO-DO List
 
 ## Introduction:
 
-Herewith my submission for Week-4's challenge: an interactive TODO list. The solution comprises: a HTML index page (index.html), a CSS style sheet (style.css), and a Java Script (JS) file (script.js).
+Herewith my submission for Week-4's challenge: an interactive TO-DO list. The solution comprises: a HTML index page (index.html), a CSS style sheet (style.css), and a Java Script (JS) file (script.js).
 
 The HTML page is sparce, acting only as the entry point for the solution. The CSS style sheet offers sufficient styling to allow some level of [intuitive use*](#note). The JS file defines the functionality of the solution.
 
@@ -13,10 +13,33 @@ The solution has been pushed to my GitHub repository and published to GitHub Pag
 
 ## The Solution
 
-### Behind the Interactive TODO List:
+### Behind the Interactive TO-DO List:
 
-The main functionality of the interactive to-do list is defined within the JS file. The JS file contains the clinet-side logic, accommodating manipulation of the Document Object Model (DOM), and event handling.
-The JS file was judiciously commented, during development. The comments offer comprehensive documentation, giving insight into design strategy and component justification. Please refer to the script.js file, as no further explanation will be offered (repeated) here.
+The main functionality of the interactive To-Do list is defined within the JS file. The JS file contains the clinet-side logic, accommodating manipulation of the Document Object Model (DOM), and event handling.  
+The JS file was judiciously commented, during development. The comments offer comprehensive documentation, giving insight into design strategy and component justification. Please refer to the script.js file, as no further explanation will be offered (repeated) here.  
+
+### Functionality of the TO-DO List:
+
+As an exercise in creating interactive web solutions, the To-Do list (as presented), has served as a valuable learning experience. However, as a To-Do list, it can serve little practical purpose.
+
+### Future Development
+
+#### Data persistence (server-side):
+A server-side application to persist (and possibly process), data is essential to the successful deployment of this product. Once data can be maintained, other improvements can be considered.
+
+#### Feature Enhancements (client-side):
+
+The To-Do list would probably benefit from a few added feature:
+- Date stamp of task creation.
+- Timelines: start date, end date, key milestones.
+- Progress, between timelines.
+- Comments: on progress, challenges and achievements.
+
+Converting tasks from a simple text span into more complex objects, will require a more complex storage/display structure. For example: a table of 'task' objects, rather than a list of 'task' text descriptions.
+
+#### Feature Enhancements (server-side):
+
+Functionality of the To-Do list can only be realised through data persistance. So, serverside storage and processing must be implemented, if this product is to be commercialy/functionally progressed.
 
 ---
 
