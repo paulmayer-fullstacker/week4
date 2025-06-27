@@ -2,7 +2,7 @@
 // This ensures that when our JavaScript tries to find elements (like taskInput or taskList), they must already exist in the DOM
 document.addEventListener('DOMContentLoaded', () => {
 
-    // Selecting specific HTML elements from our page using their id attributes. 
+    // Selecting specific HTML elements from our index page using their id attributes. 
     // Storing references to these elements in constant variables, makes it easier to interact with them later.
     const taskInput = document.getElementById('taskInput');
     const addTaskBtn = document.getElementById('addTaskBtn');
@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
         taskList.innerHTML = ''; // Clear existing tasks
 
         // Also, clear any old error messages
-        errorMessage.textContent = ''; // Clear any previous error messages
+        errorMessage.textContent = '';
         
         // If 'tasks' is empty, add an element <li>, to the 'taskList' with the message "No tasks yet! Add one above." 
         // Then, return; immediately exits the function, so the subsequent forEach loop doesn't run, as there are no tasks to itterate through.
@@ -43,25 +43,29 @@ document.addEventListener('DOMContentLoaded', () => {
             listItem.appendChild(taskTextSpan);
 
             // Buttons container
-            // A <div> is created to group the "Edit" and "Delete" buttons. This is good for layout and styling.
+            // A <div> is created to group the "Edit" and "Delete" buttons.
             const buttonContainer = document.createElement('div');
 
-            // Edit Button (Bonus)
+            // Create Edit button 
             const editBtn = document.createElement('button');
             editBtn.textContent = 'Edit';
             editBtn.classList.add('edit-btn');
+            // When the Btn is created it is given an index in the array.
+            // This index is embeded in the anonymous function () => editTask(index, .. ), which is a call-back for the click event.
             editBtn.addEventListener('click', () => editTask(index, taskTextSpan, buttonContainer));
             buttonContainer.appendChild(editBtn);
 
-            // Delete Button
+            // Create Delete button
             const deleteBtn = document.createElement('button');
             deleteBtn.textContent = 'Delete';
             deleteBtn.classList.add('delete-btn');
             // When the Btn is created it is given an index in the array.
-            // This index is embeded in the anonymous function () => deleteTask(index).
+            // This index is embeded in the anonymous function () => deleteTask(index), which is a call-back for the click event.
             deleteBtn.addEventListener('click', () => deleteTask(index));
             buttonContainer.appendChild(deleteBtn);
-
+            // Append the buttons to the button container, 
+            // .. append the button container to the list item
+            // .. and append the list item to the task list.
             listItem.appendChild(buttonContainer);
             taskList.appendChild(listItem);
         });
@@ -77,10 +81,10 @@ document.addEventListener('DOMContentLoaded', () => {
             return; // Stop the function if the input is empty
         }
     
-        // Pash the new task to the end 'tasks' array
+        // Pash the new task to the end of 'tasks' array
         tasks.push(taskText);
         // Incongruity: unshift() shifts current elements up by one index and inserts a new element at the start of the array.
-        //tasks.unshift(taskText)
+        //tasks.unshift(taskText)  // Not used here. We will push to end of array.
     
         // Clear the input field
         taskInput.value = '';
@@ -111,7 +115,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Function to edit a task
-    // It takes the task's index, the span element displaying its text, the edit button itself,
+    // This takes the task's index, the span element displaying its text,
     // and the container holding the buttons for that list item.
     function editTask(index, taskTextSpan, buttonContainer) {
         // Retrieve current text of the task by index.
