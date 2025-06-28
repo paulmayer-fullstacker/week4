@@ -2,7 +2,7 @@
 
 ## Introduction:
 
-Herewith my submission for Week-4's challenge: an interactive TO-DO list. The solution comprises: a HTML index page (index.html), a CSS style sheet (style.css), and a Java Script (JS) file (script.js).
+Herewith my submission for Week-4's challenge: an interactive To-Do list. The solution comprises: a HTML index page (index.html), a CSS style sheet (style.css), and a Java Script (JS) file (script.js).
 
 The HTML page is sparce, acting only as the entry point for the solution. The CSS style sheet offers sufficient styling to allow some level of [intuitive use*](#note). The JS file defines the functionality of the solution.
 
