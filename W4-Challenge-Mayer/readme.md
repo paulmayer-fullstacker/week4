@@ -50,7 +50,7 @@ The project has now been pushed my GitHub repository: https://github.com/paulmay
 ### GitHub Pages:
 
 The solution has been published to GitHub Pages, and can be found at this URL:  
-https://paulmayer-fullstacker.github.io/week4/
+https://paulmayer-fullstacker.github.io/week4/W4-Challenge-Mayer/
 
 ---
 
